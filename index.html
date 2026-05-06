@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PyForge Project Lab | ProjectPulse</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Learning navigation">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">Py</span>
+          <div>
+            <strong>PyForge</strong>
+            <span>Project-based Python</span>
+          </div>
+        </div>
+
+        <section class="profile-panel" aria-label="Player progress">
+          <div class="profile-topline">
+            <span id="levelLabel">Level 1</span>
+            <span id="streakLabel">0 day streak</span>
+          </div>
+          <div class="xp-meter" aria-label="Experience progress">
+            <span id="xpFill"></span>
+          </div>
+          <div class="profile-footline">
+            <span id="xpLabel">0 XP</span>
+            <span id="badgeLabel">0 badges</span>
+          </div>
+        </section>
+
+        <nav class="nav-list" aria-label="Primary">
+          <button class="nav-button active" type="button" data-view="dashboard">
+            <span class="nav-icon" data-icon="dashboard"></span>
+            <span>Dashboard</span>
+          </button>
+          <button class="nav-button" type="button" data-view="missions">
+            <span class="nav-icon" data-icon="map"></span>
+            <span>Build Path</span>
+          </button>
+          <button class="nav-button" type="button" data-view="arena">
+            <span class="nav-icon" data-icon="sword"></span>
+            <span>Arena</span>
+          </button>
+          <button class="nav-button" type="button" data-view="codex">
+            <span class="nav-icon" data-icon="book"></span>
+            <span>Codex</span>
+          </button>
+          <button class="nav-button" type="button" data-view="progress">
+            <span class="nav-icon" data-icon="chart"></span>
+            <span>Progress</span>
+          </button>
+        </nav>
+
+        <button class="utility-button" type="button" data-action="reset-progress">
+          <span class="nav-icon" data-icon="rotate"></span>
+          <span>Reset progress</span>
+        </button>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" id="viewEyebrow">Python project lab</p>
+            <h1 id="viewTitle">Dashboard</h1>
+          </div>
+          <div class="top-actions">
+            <button class="icon-button" type="button" data-action="toggle-theme" aria-label="Toggle theme" title="Toggle theme">
+              <span data-icon="sun"></span>
+            </button>
+          </div>
+        </header>
+
+        <section class="view active" id="dashboardView" aria-labelledby="viewTitle"></section>
+        <section class="view" id="missionsView" aria-labelledby="viewTitle"></section>
+        <section class="view" id="arenaView" aria-labelledby="viewTitle"></section>
+        <section class="view" id="codexView" aria-labelledby="viewTitle"></section>
+        <section class="view" id="progressView" aria-labelledby="viewTitle"></section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
